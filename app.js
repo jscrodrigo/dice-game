@@ -11,9 +11,11 @@ GAME RULES:
 1 - A player loses his entire score if he rolls two 6 in a row. After that, is the next player turn.
 2 - Add an input field to the HTML where players can set the winning score, so that they can change the predefined score of 100.
 */
+
 var scores, roundScore, currentPlayer, gamePlaying, dicePreValue;
 var inputElement = document.querySelector('.winning-score');
 init();
+
 //DOM manipulation - selecting  by Id (#) and changing the text content
 /* 1st way: Only set text to the HMTL
 document.querySelector('#current-' + currentPlayer).textContent = dice;*/
@@ -28,7 +30,6 @@ console.log(example);
 document.querySelector('.btn-roll').addEventListener('click', function(){
   if(gamePlaying){
     //1st setting a random number
-    //Math.floor converts decimals to integers
     var dice1 = Math.floor((Math.random() * 6))+1;
     var dice2 = Math.floor((Math.random() * 6))+1;
     //2nd display the result
@@ -51,6 +52,7 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
     dicePreValue = dice1 + dice2;
     }
 });
+
 //Button to store points
 document.querySelector('.btn-hold').addEventListener('click', function(){
   if(gamePlaying){
@@ -94,9 +96,11 @@ scores = [0,0];
 roundScore = 0;
 currentPlayer = 0;
 gamePlaying = true;
+  
 //Manipulating CSS elements: Hiding the dice. To access classes use dot ('.class'), Ids use #id-name
 document.getElementById('dice-1').style.display = 'none';
 document.getElementById('dice-2').style.display = 'none';
+  
 //Only for Ids. Faster than querySelector
 document.getElementById('score-0').textContent = '0';
 document.getElementById('current-0').textContent = '0';
