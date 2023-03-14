@@ -1,2 +1,3 @@
-//dice-game
-Dice game created following the Jonas Schemedtmann Java Script Course on Udemy.
+# Dicer
+
+> Dicer is a simple dice game created following Jonas Schemedtmann1s JavaScript Course on Udemy.
